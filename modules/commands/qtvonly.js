@@ -4,7 +4,6 @@ const { resolve } = require("path");
 module.exports.config = {
     name: "qtvonly",
     version: "1.0",
-    Rent: 1,
     hasPermssion: 1,
     credits: "D-Jukie fix Kadeer",
     description: "Quản lý admin bot",

@@ -15,7 +15,7 @@
   },
   "author": "D-Jukie",
   "dependencies": {
-    "@distube/ytdl-core": "^4.13.3",
+    "@distube/ytdl-core": "^4.14.4",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@miraipr0ject/assets": "",
     "acorn": "^8.12.1",
@@ -50,6 +50,7 @@
     "moment-timezone": "^0.5.45",
     "mqtt": "^4.3.8",
     "ms": "",
+    "node": "^18.20.4",
     "node-fetch": "^3.3.2",
     "node-superfetch": "^0.2.3",
     "node-telegram-bot-api": "^0.64.0",
@@ -62,12 +63,14 @@
     "readline": "",
     "request": "",
     "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7",
     "stream": "^0.0.3",
     "string-similarity": "",
     "tinyurl": "^1.1.7",
     "totp-generator": "",
     "uniqid": "^5.4.0",
     "weather-js": "^2.0.0",
-    "wikijs": "^6.4.1"
+    "wikijs": "^6.4.1",
+    "youtube-search-api": "^1.2.2"
   }
 }

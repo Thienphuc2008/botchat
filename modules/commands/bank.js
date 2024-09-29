@@ -128,27 +128,27 @@ exports.run = async o=> {
                 send('⚠️ Có lỗi xảy ra liên hệ dev để xử lý');
             };
             break;
-        case 'nạp':
-        case 'gửi': {
-                let money = o.args[1];
-                let min = 100n;
-                let userData = await getData(sid);
-                if (/^all$/.test(money))money = BigInt(userData.money);
-                else if (/^[0-9]+%$/.test(money))money = BigInt(userData.money)*BigInt(money.match(/^[0-9]+/)[0])/100n;
-                if (!money || isNaN(money.toString())) return send(`❎ Vui lòng nhập số tiền cần nạp vào tài khoản`); else money = BigInt(money);
-                if (money < min) return send(`❎ Số tiền nạp tối thiểu là ${min.toLocaleString()}$`);
-                if (BigInt(userData.money) < money) return send(`❎ Bạn không đủ tiền trong ví để nạp vào tài khoản`);
-                let newBalance = BigInt(data.balance) + money;
-
-                await decreaseMoney(sid, money.toString());
-                data.balance = newBalance.toString();
-                data.history.push({
-                    type: 'send', amount: money.toString(), author: sid, time: now(),
-                });
-                save(data);
-                send(`✅ Nạp ${money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}$ vào tài khoản thành công`);
-            };
-            break;
+            case 'nạp':
+                case 'gửi': {
+                        let money = o.args[1];
+                        let min = 100n;
+                        let userData = await getData(sid);
+                        if (/^all$/.test(money))money = BigInt(userData.money);
+                        else if (/^[0-9]+%$/.test(money))money = BigInt(userData.money)*BigInt(money.match(/^[0-9]+/)[0])/100n;
+                        if (!money || isNaN(money.toString())) return send(`❎ Vui lòng nhập số tiền cần nạp vào tài khoản`); else money = BigInt(money);
+                        if (money < min) return send(`❎ Số tiền nạp tối thiểu là ${min.toLocaleString()}$`);
+                        if (BigInt(userData.money) < money) return send(`❎ Bạn không đủ tiền trong ví để nạp vào tài khoản`);
+                        let newBalance = BigInt(data.balance) + money;
+        
+                        await decreaseMoney(sid, money.toString());
+                        data.balance = newBalance.toString();
+                        data.history.push({
+                            type: 'send', amount: money.toString(), author: sid, time: now(),
+                        });
+                        save(data);
+                        send(`✅ Nạp ${money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}$ vào tài khoản thành công`);
+                    };
+                    break;
         case 'rút':
         case 'lấy': {
                 let money = o.args[1];

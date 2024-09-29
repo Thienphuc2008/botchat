@@ -37,7 +37,7 @@ module.exports = function ({ api, models, Users, Threads, Currencies }) {
     if (typeof body === 'string' && body.startsWith(PREFIX) && !ADMINBOT.includes(senderID) && adminbot.adminOnly == true) {
       return api.sendMessage('⚠️ Bot đang được bảo trì, vui lòng sử dụng sau', threadID, messageID)
     }
-    const dataAdbox = require('./../../modules/commands/cache/data/data.json');
+    const dataAdbox = require('../../SystemData/data/data.json');
     var threadInf = (threadInfo.get(threadID) || await Threads.getInfo(threadID));
     const findd = threadInf.adminIDs.find(el => el.id == senderID);
     if (typeof body === 'string' && body.startsWith(PREFIX) && dataAdbox.adminbox.hasOwnProperty(threadID) && dataAdbox.adminbox[threadID] == true && !ADMINBOT.includes(senderID) && !findd && event.isGroup == true) return api.sendMessage('Chỉ quản trị viên nhóm mới có thể sử dụng bot ⚠️', event.threadID, event.messageID)

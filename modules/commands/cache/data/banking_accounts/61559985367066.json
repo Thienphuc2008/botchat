@@ -1,0 +1,17 @@
+{
+    "account_number": "767533",
+    "uid": "61559985367066",
+    "balance": "0",
+    "created_at": 1727617738539,
+    "debt": "0",
+    "count_debt": 0,
+    "status": 0,
+    "history": [],
+    "logins": [],
+    "settings": {
+        "public": true
+    },
+    "expired_ban": {},
+    "interest_period": {},
+    "pass": "1883"
+}
