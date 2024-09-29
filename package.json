@@ -35,7 +35,6 @@
     "encode32": "^1.1.0",
     "eval": "^0.1.6",
     "fast-speedtest-api": "^0.3.2",
-    "fca-hrz": "github:KanzuXHorizon/Fca-Horizon-Remastered",
     "fluent-ffmpeg": "^2.1.2",
     "form-data": "^4.0.0",
     "fs": "^0.0.1-security",
