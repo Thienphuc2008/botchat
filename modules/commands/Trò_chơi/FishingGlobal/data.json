@@ -1,0 +1,45 @@
+[
+    {
+        "location":"Asia",
+        "area":[
+            {   
+                "ID": 0,
+                "name":"Đông Nam Á",
+                "creature":[
+                    {
+                        "ID":0,
+                        "name":"Cá Rô Phi",
+                        "category":"Common",
+                        "size":32,
+                        "weight": 1200,
+                        "sell":150,
+                        "image": "https://i.imgur.com/RHHZDz0.png"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "location":"Europe",
+        "area":[
+            {   
+                "ID": 0,
+                "name":"Tây Âu",
+                "creature":[
+                    {
+                        "ID":0,
+                        "name":"Common Bass",
+                        "category":"Common",
+                        "size":98,
+                        "weight": 5000,
+                        "sell":200,
+                        "image": "https://i.imgur.com/njUprtC.png"
+                    }
+                ]
+            } 
+        ]
+    }
+]
+
+
+

@@ -1,0 +1,123 @@
+{
+    "language": "vi",
+    "DeveloperMode": false,
+    "autoCreateDB": true,
+    "iconUnsend": {
+        "status": true,
+        "icon": "👍"
+    },
+    "notiGroup": true,
+    "NOTIFICATION": false,
+    "allowInbox": true,
+    "commandDisabled": [],
+    "eventDisabled": [],
+    "EMAIL": "",
+    "PASSWORD": "",
+    "ACCESSTOKEN": "",
+    "BOTNAME": "ʙʟᴀᴄᴋ",
+    "ADMIN_NAME": "lhtminh",
+    "FACEBOOK_ADMIN": "m.me/61559985367066",
+    "TELEGRAM_ADMIN": "t.me/",
+    "ZALO_ADMIN": "0123456",
+    "PREFIX": "/",
+    "ADMINBOT": [
+        "61559985367066",
+        "",
+        "",
+        ""
+    ],
+    "NDH": [
+        "61559985367066"
+    ],
+    "CONTACT": [
+        "61559985367066"
+    ],
+    "DATABASE": {
+        "sqlite": {
+            "storage": "antists.sqlite"
+        }
+    },
+    "APPSTATEPATH": "appstate.json",
+    "FCAOption": {
+        "forceLogin": true,
+        "listenEvents": true,
+        "pauseLog": true,
+        "logLevel": "error",
+        "selfListen": true,
+        "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.1 Mobile/15E148 Safari/604.1"
+    },
+    "version": "1.2.14",
+    "menu": {
+        "autoUnsend": {
+            "status": true,
+            "timeOut": 60
+        }
+    },
+    "log": {
+        "enable": true
+    },
+    "daily": {
+        "cooldownTime": 43200000,
+        "rewardCoin": 5000000
+    },
+    "spamcmt": {
+        "spamDelay": 1.5
+    },
+    "test": {
+        "spamDelay": 1.5
+    },
+    "cave": {
+        "cooldownTime": 1200000
+    },
+    "work": {
+        "cooldownTime": 1200000
+    },
+    "cauca": {
+        "APIKEY": ""
+    },
+    "chuirieng": {
+        "spamDelay": 2
+    },
+    "kicktag": {
+        "kickTagDelay": 2
+    },
+    "minecraft": {
+        "APIKEY": ""
+    },
+    "pokemon": {
+        "APIKEY": ""
+    },
+    "regboxspam": {
+        "spamDelay": 2
+    },
+    "spam": {
+        "spamDelay": 2
+    },
+    "spamping": {
+        "spamDelay": 2
+    },
+    "spampri": {
+        "spamDelay": 2
+    },
+    "spamregbox": {
+        "spamDelay": 2
+    },
+    "sub1": {
+        "cooldownTime": 60000
+    },
+    "antinamebox": {
+        "autoUnsend": true,
+        "sendNoti": true,
+        "timeToUnsend": 10
+    },
+    "leave": {
+        "status": false,
+        "number": 0
+    },
+    "xidach": {
+        "maxPlayers": 5,
+        "normalWinBonus": 1,
+        "superWinBonus": 2,
+        "epicWinBonus": 4
+    }
+}

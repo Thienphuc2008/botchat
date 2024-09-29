@@ -1,0 +1,37 @@
+[
+	{
+		"name": "Light Rod",
+		"price": 400,
+		"durability": 20,
+		"countdown": 200,
+		"image": "https://i.imgur.com/HCMuton.png"
+	},
+	{
+		"name": "Steel Rod",
+		"price": 1600,
+		"durability": 50,
+		"countdown": 180,
+		"image": "https://i.imgur.com/mptiizn.png"
+	},
+	{
+		"name": "Titanium Rod",
+		"price": 6400,
+		"durability": 100,
+		"countdown": 150,
+		"image": "https://i.imgur.com/MtqsiZm.png"
+	},
+	{
+		"name": "Carbonfiber Rod",
+		"price": 19600,
+		"durability": 200,
+		"countdown": 80,
+		"image": "https://i.imgur.com/6OwqXTa.png"
+	},
+	{
+		"name": "Ultra-Quality Rod",
+		"price": 58800,
+		"durability": 450,
+		"countdown": 40,
+		"image": "https://i.imgur.com/9nNjibp.png"
+	}
+]

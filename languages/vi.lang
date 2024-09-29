@@ -1,0 +1,104 @@
+# Nếu bạn muốn xuống dòng, hãy dùng\n. VD: JRT\nJRT
+# Sau khi thay đổi, bạn phải khởi động lại bot để có hiệu lực.
+# Đặt kí tự # ở đầu mỗi câu nếu bạn không muốn code chạy những dòng đó.
+# Thanks to JRT for translate to Vietnamese!
+
+# mirai.js
+
+mirai.errorFormat=Module không đúng định dạng!
+mirai.nameExist=Tên module bị trùng với một module mang cùng tên khác hãy mau kiểm tra lại
+mirai.notFoundLanguage=Module %1 không hỗ trợ ngôn ngữ ngôn ngữ của bạn
+mirai.notFoundPackage=Không tìm thấy package %1 hỗ trợ module %2
+mirai.cantInstallPackage=Không thể cài đặt package %1 cho module %2, lỗi: %3
+mirai.loadedPackage=Đã tải thành công toàn bộ package cho module %1
+mirai.loadedConfig=Đã tải thành công config cho module %1
+mirai.cantLoadConfig=Không thể tải config của module %1, lỗi: %2
+mirai.cantOnload=Không thể khởi chạy setup của module %1, lỗi: %1
+mirai.successLoadModule=Đã tải thành công module %1
+mirai.failLoadModule=Không thể tải thành công module %1, lỗi: %2
+mirai.finishLoadModule=Đã tải thành công %1 module commands và %2 module events
+mirai.foundPathAppstate=Đã tìm thấy file appstate
+mirai.notFoundPathAppstate=Không tìm thấy file appstate vui lòng kiểm tra lại
+mirai.checkListGban=Đang kiểm tra danh sách BANNED...
+mirai.banDevice=Hiện tại thiết bị của bạn đã bị ban khỏi Bot , liên hệ tới facebook https://fb.me/culo2006!!!
+mirai.keyNotSameFormat=Dữ liệu bạn nhập phải là một dãy số bao gồm 6 chữ số!
+mirai.codeInputExpired=Code bạn nhập không trùng khớp hoặc đã hết hạn!
+mirai.unbanDeviceSuccess=Facebook ID của bạn đã được gỡ ban, hãy khởi động lại để có thể tiếp tục sử dụng BOT!!!
+mirai.userBanned=Bạn đã bị ban khỏi Bot vào lúc %1 với lý do: %2.\nVui lòng liên hệ Admin. 
+mirai.finishCheckListGban=Đã kiểm tra xong danh sách BANNED
+mirai.handleListenError=handleListener đã xảy ra một số lỗi không mong muốn, lỗi: %1
+mirai.warningSourceCode=\nBOT update complete!!!
+mirai.refreshListen=Đã làm mới lại handleListener...
+mirai.successConnectDatabase=Dữ liệu Bot đã được kết nối thành công!!
+mirai.failConnectDatabase=Dữ liệu Bot đã được kết nối thất bại!!, lỗi: %1. Vui lòng hãy kiểm tra lại!!
+
+# includes/listen.js
+
+listen.startLoadEnvironment=Tiến hành khởi tạo cấu trúc BOT!
+listen.loadedEnvironmentThread=Đã khởi tạo thành công cấu trúc nhóm dùng BOT!!!
+listen.loadedEnvironmentUser=Đã khởi tạo thành công cấu trúc người dùng BOT!!!
+listen.successLoadEnvironment=Đã khởi tạo thành công cấu trúc BOT thành công!!!
+listen.failLoadEnvironment=Khởi tạo cấu trúc BOT thành công, lỗi: %1
+
+# includes/controller/currencies.js
+
+currencies.needObjectOrArray=Phải là một Array hoặc Object hoặc có thể là cả hai
+currencies.needObject=Phải là một Object
+currencies.needNumber= Phải là một con số
+
+# includes/controller/threads.js
+
+threads.needObjectOrArray=Phải là một Array hoặc Object hoặc có thể là cả hai
+threads.needObject=Phải là một Object
+
+# includes/controller/users.js
+
+users.needObjectOrArray=Phải là một Array hoặc Object hoặc có thể là cả hai
+users.needObject=Phải là một Object
+
+# includes/handle/handleCommand.js
+
+handleCommand.userBanned=Hiện tại bạn đang bị cấm sử dụng bot!\nLiên hệ FB:m.me//culo2006  để biết thêm chi tiết.\n%1\n%2
+handleCommand.threadBanned=Hiện tại nhóm của bạn đang bị cấm sử dụng bot!\nVui lòng liên hệ Admin.\nĐể có thể xin và sử dụng lại bot.\n%1\n%2
+handleCommand.commandNotExist= Lệnh bạn sử dụng không tồn tại, có phải là lệnh "%1" hay không?
+handleCommand.commandThreadBanned=Nhóm bạn đã bị cấm sử dụng lệnh "%1"\nVui lòng liên hệ Admin
+handleCommand.commandUserBanned=Bạn đã bị cấm sử dụng lệnh "%1"\nVui lòng liên hệ ADMIN 
+handleCommand.threadNotAllowNSFW=Nhóm của bạn không được phép sử dụng những lệnh cấm NSFW vì nó chứa nội dung 18+ 
+handleCommand.cantGetInfoThread=Không thể lấy thông tin của nhóm, lỗi: %1
+handleCommand.permssionNotEnough= Xin lỗi vì bạn là thành nên lệnh  "%1" sẽ không hoạt động. Chỉ có quản trị viên hoặc ADMIN dùng được!!!
+handleCommand.cantSetMessageReaction=Đã có lỗi xảy ra không mong muốn tại setMessageReaction, lỗi: %1
+handleCommand.notFoundLanguage=Không tìm thấy ngôn ngữ hỗ trợ cho module %1s
+handleCommand.executeCommand=» %1 « Lệnh sử dụng: %2 bởi người dùng: %3 tại nhóm: %4 | Args đi kèm: %5 | Thời gian xử lý: %6ms
+handleCommand.commandError=Đã xảy ra lỗi không mong muốn trong khi thực thi lệnh %1, lỗi: %2
+
+# includes/handle/handleCommandEvent.js
+
+handleCommandEvent.moduleError=Đã xảy ra lỗi không mong muốn tại lệnh %1, lỗi: %2
+
+# includes/handle/handleCreateDatabase.js
+
+handleCreateDatabase.newThread=THREAD ID » %1
+handleCreateDatabase.newUser=USER ID » %1
+
+# includes/handle/handleEvent.js
+
+handleEvent.executeEvent=» %1 « Event được thực thi: %2 tại nhóm: %3 | Thời gian xử lý: %4ms
+handleEvent.eventError=Đã xảy ra lỗi không mong muốn trong khi thực thi event %1, lỗi: %12
+
+# includes/handle/handleReaction.js
+
+handleReaction.missingValue=Thiếu dữ liệu để có thể thực thi phản hồi lại câu trả lời của bạn
+handleReaction.executeError=Đã xảy ra lỗi không mong muốn khi đang thực thi trả lời câu hỏi bạn, lỗi: %1
+
+# includes/handle/handleReply.js
+
+handleReply.missingValue=Thiếu dữ liệu để có thể thực thi phản hồi lại câu trả lời của bạn
+handleReply.executeError=Đã xảy ra lỗi không mong muốn khi đang thực thi trả lời câu hỏi bạn, lỗi: %1
+
+# includes/handle/handleSchedule.js
+
+handleSchedule.exectuteError=Đã xảy ra lỗi không mong muốn trong lúc schedule tại module %1, lỗi: %2
+
+# utils/index.js
+
+utils.throwError= » Dùng lệnh sai rồi bạn ơi vui lòng sử dụng %1help %2 để biết thêm hướng dẫn sử dụng bot.\nNếu bạn thấy khó hiểu quá vui lòng liên hệ ADMIN.\nXin cảm ơn!

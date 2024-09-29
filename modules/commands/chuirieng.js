@@ -1,0 +1,287 @@
+module.exports.config = {
+    name: "chuirieng",
+    version: "1.0.0",
+    hasPermssion: 3,
+    Rent: 2,
+    credits: "Vtuan",
+    description: "spam riêng cho 1 người",
+    commandCategory: "War",
+    usages: "{id}",
+    cooldowns: 1,
+    envConfig: {
+      spamDelay: 2
+    }
+  };
+  
+  const spamThreads = new Set();
+  
+  function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  
+  module.exports.run = async function ({ api, event, args, Users }) {
+    const { threadID, messageID } = event;
+    const [id] = args;
+    const content = [
+        "Sủa Mau Lên🤣",
+        "Đĩ Mẹ Mày😅",
+        "Óc Chó🤭?",
+        "mày biết sợ rồi à 🤣🤣?",
+        "mày cố nữa đi 😂?",
+        "clm 🤣?",
+        "sủa mau lên con chó🤣🤣",
+        "con đĩ cave lộ lồn cay kiểu🤣🤣",
+        "lũ ngu đòi đọ bot anh🤣👉",
+        "kkk🤣🤣",
+        "con đĩ cave show lồn show dú kiểu😜",
+        "mày sợ anh à con đĩ😏?",
+        "xạo à clm cuoii😏?",
+        "sao m xạo da👉",
+      "cố đeee🤭",
+      "sồn hăng lên em🥺",
+      "sao m yếu v😔",
+      "cố tí nữa👉",
+      "sao kìa chậm à🙃",
+      "hăng hái lên tí chứ😤",
+      "tới sáng đi em ei=))",
+      "cố gắng tí eii🤑",
+      "k đc à:))",
+      "con eii cố de😗",
+      "sao m câm kì:))",
+      "gà j🤭",
+      "tnh gà=))",
+      "m gà mà🤨",
+      "dk à:)?",
+      "đúng mà ?",
+      "cãi à :))",
+      "mày còn gì khác hơn không :))",
+      "học lỏm kìa🤣",
+      "cố tí e ?",
+      "mếu à😭",
+      "sao mếu kìa:))",
+      "tao đã cho m mếu đâu :))",
+      "va lẹ lên chậm v😏?",
+      "sao kìa",
+      "từ bỏ r à",
+      "bị bạn bè bỏ rơi à 😏?",
+      "mạnh mẽ tí đi nà",
+      "cố đê con chó ăn cứt:))?",
+      ":)))",
+      "sợ tao kìa🤣",
+      "sao sợ tao kìa",
+      "cay lắm phải kh",
+      "ớt rồi kìa em",
+      "mày còn chối à",
+      "làm tí đê",
+      "mới đó đã mệt r kìa",
+      "sao gà mà sồn v",
+      "sồn như lúc đầu cho tao",
+      "sao à",
+      "ai cho m nhai",
+      "cay lắm r", 
+      "từ bỏ đi em",
+      "mày nghĩ mày làm t cay đc à",
+      "có đâu",
+      "tao đang hành m mà",
+      "bịa à",
+      "cay :)))))",
+      "cố eiii",
+      "hăng tiếp đi",
+      "tới sáng k em",
+      "ko tới sáng à",
+      "chán v",
+      "m gà vậy :))",
+      "sao ngu dậy con:))",
+      "coi tụi nó dồn ngu kìa",
+      "sao mày ngu dậy:))?",
+      "lại win à",
+      "lại win r",
+      "lũ cặc cay tao lắm🤣🤣",
+      "cố lên đê",
+      "sao mới nhiêu đó đã đuối r à:))?",
+      "yếu đến thế à",
+      "sao kìa",
+      "khóc kìa",
+      "cầu cứu lẹ ei",
+      "ai cứu đc m à :))",
+      "tao bá mà",
+      "sao m gà thế",
+      "hăng lẹ cho tao",
+      "con chó eiii🤣",
+      "ổn k em",
+      "kh ổn r à",
+      "xin tha eii",
+      "mẹ mày ngu à",
+      "bú cặc cha m k em",
+      "thg giả gái :))",
+      "coi nó ngu kìa ae",
+      "con chó này giả ngu à",
+      "m ổn k",
+      "mồ côi kìa",
+      "sao v sợ r à",
+      "cố gắng tí em",
+      "cay cú lắm r",
+      "đấy đấy bắt đầu",
+      "chảy nước đái bò r à em",
+      "sao kìa đừng run",
+      "mày run à:))",
+      "thg dái lở",
+      "cay mẹ m lắm",
+      "lgbt xuất trận ae eii",
+      "thg cặc giết cha mắng mẹ",
+      "sủa mạnh đê",
+      "mày chết r à:))",
+      "sao chết kìa",
+      "bị t hành nên muốn chết à🤣🤣",
+      "con lồn ngu=))",
+      "sao kìa",
+      "mạnh lên kìa",
+      "yếu sinh lý à",
+        "sủa đê",
+      "cay à",
+      "hăng đê",
+      "gà kìa ae",
+      "akakaa",
+      "óc chó kìa",
+      "🤣🤣🤣",
+      "ổn không🤣🤣",
+      "bất ổn à",
+      "ơ kìaaa",
+      "sao lại chạy vậy😏?",
+      "hăng hái đê",
+      "chạy à 🤣🤣",
+      "tởn à",
+      "kkkk",
+      "mày dốt à",
+      "cặc ngu",
+      "cháy đê",
+      "chat hăng lên",
+      "cố lên",
+      "mồ côi cay",
+      "cay à",
+      "cn chó ngu",
+      "óc cặc kìa",
+      "đĩ đú:))",
+      "đú kìa",
+      "cùn v",
+      "r x",
+      "hhhhh",
+      "kkakak",
+      "sao đú",
+      "cặc con",
+      "ngu kìa",
+      "chat mạnh đê",
+      "hăng ee",
+      "ơ ơ ơ",
+      "sủa cháy đê",
+      "sủa mạnh eei",
+        "thẩm du cái lồn má m lên :))",
+        "con đĩ cãi cùn",
+        "địt bà nội sư gia nhà m =))",
+        "úi úi",
+        "nhanh lên con chó lồn khai khắm=))",
+        "sao con đĩ mẹ ày gà vậy",
+        "địt lồn mẹ mày",
+        "dập cặc thằng cha mày liền",
+        "Cầm đinh ba đâm lòi cuống họng đĩ mẹ mày liền",
+        "Con thú đú",
+        "lòi lồn chiến sĩ rồi à",
+        "sao không mạnh mẽ lên",
+        "khép lép vậy",
+        "sợ hãi rồi à",
+        "Lẹ lên con điếm thúi",
+        "con đĩ mồ coi ăn hôi",
+        "thế nào rồi",
+        "sợ anh mày chưa",
+        "anh mày bá sàn mà",
+        "sao m chối hoài",
+        "chối là con má m die",
+        "ngu thì ngu vừa thôi=))",
+        "không t đâm chết thằng cha mày",
+        "óc chó dữ",
+        "lồn mẹ mày",
+        "điếm thúi ơi=))",
+        "đừng rớt nhây nhó:3",
+        "thấy sao rùi:3",
+        "Bede sủa tiếng nghe choiw",
+        "Cặc Cặc Cặc",
+        "Lồn Lồn Lồn",
+        "=))",
+        "Thấy anh nhây bá ko",
+        "quá bá mà",
+        "sao lại anh được",
+        "khép đuôi xin tha đê",
+        "Rủa đĩ má m die",
+        "Ngồi nhây tới đêm trăng tròn nè=))",
+        "Nhây sao lại anh",
+        "Bóng sida",
+        "bede dập cu ơi=))",
+        "nhắm chửi lại anh không=))",
+        "lẹ lên con đĩ",
+        "điếm thúi ăn hôi ơi:))",
+        "Lên xem còn tài cán gì không nào",
+        "Sao mà xạo lồn",
+        "Dân va 2023 à",
+        "Chỉ có vậy thôi sao",
+        "mày làm được gì không😤",
+        "hay chỉ biết phản kháng🤭=))",
+        "tk cu bé phản kháng di😏?",
+        "con đĩ cave luôn khảng phán đi🥺?",
+        "bị chửi nên không phản kháng à😀?",
+        "con cave và tk cu bé hợp nhề😏👉",
+        "2 con bede không phản kháng được à😋",
+        "2 con bede sợ anh rồi:))🙃",
+        "chạy về mách mẹ à 2 con bede😗?",
+        "chạy về trốn dô cái lồn mẹ mày đi😍?",
+        "1 đứa bú lồn mẹ😎?",
+        "1 đứa bú cu cha😎?",
+        "bất hiếu cmnr:))😜",
+        "mày làm gì để anh sợ đi:))🤣?",
+        "mày có tý sát thương nào ko😂?",
+        "con đĩ mẹ mày ăn cứt cố đi🤣?",
+        "mày sợ anh à con chó ăn cứt:))?",
+        "anh win cmnr clm🤣",
+        "lũ cave cay cha cmnr😑",
+        "cay anh  r à lũ đú😅",
+        "sợ anh  à😗",
+        "anh  win m mà:)))",
+        "win nha clm bede🤣🤣"
+    ];
+    let name = await Users.getNameUser(id);
+    if (!id) {
+      return api.sendMessage('Vui lòng nhập ID của người cần spam!', threadID, messageID);
+    }
+  
+    if (id === "stop") {
+      if (spamThreads.has(threadID)) {
+        spamThreads.delete(threadID);
+        return api.sendMessage('Đã dừng spam!', threadID, messageID);
+      }
+      return api.sendMessage('Không có quá trình spam nào đang diễn ra!', threadID, messageID);
+    }
+  
+    if (!spamThreads.has(threadID)) {
+      spamThreads.add(threadID);
+      api.sendMessage(`Bắt đầu spam đến ID: ${id}!`, threadID, messageID);
+  
+      let i = 0;
+      while (true) {
+        if (i === content.length) {
+          i = 0; 
+        }
+  
+        if (!spamThreads.has(threadID)) {
+          break;
+        }
+  
+        await delay(module.exports.config.envConfig.spamDelay * 1000);
+        api.sendMessage(`${name} ${content[i]}`, id);
+        i++;
+      }
+  
+      spamThreads.delete(threadID); 
+    } else {
+      api.sendMessage('Đang spam rồi cut!', threadID, messageID);
+    }
+  };
+  
