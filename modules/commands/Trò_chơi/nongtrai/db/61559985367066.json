@@ -12,9 +12,9 @@
         "id": 0
     },
     "spin": {
-        "remaining": 25,
+        "remaining": 50,
         "max": 50,
-        "last_update": 1727618217872
+        "last_update": 1727662964575
     },
     "lands": {
         "crops": [

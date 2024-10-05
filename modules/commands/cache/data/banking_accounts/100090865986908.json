@@ -1,0 +1,32 @@
+{
+    "account_number": "496081",
+    "uid": "100090865986908",
+    "balance": "540000",
+    "created_at": 1727735863161,
+    "debt": "694575",
+    "count_debt": 2,
+    "status": 0,
+    "history": [
+        {
+            "type": "borrow",
+            "amount": "500000",
+            "author": "100090865986908",
+            "time": 1727735963559
+        },
+        {
+            "type": "borrow",
+            "amount": "100000",
+            "author": "100090865986908",
+            "time": 1727736071820
+        }
+    ],
+    "logins": [],
+    "settings": {},
+    "expired_ban": {},
+    "interest_period": {
+        "balance": 1727822363742,
+        "debt": 1727786083506
+    },
+    "pass": "",
+    "timestamp_due_repay": 1727908763559
+}
